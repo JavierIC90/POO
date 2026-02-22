@@ -28,16 +28,14 @@ class Estudiante:
             return f"{self.nombre} está reprobada."
 
     def describir(self):
-        return f"{self.nombre} tiene {self.edad} años y es estudiante de {self.semestre} semestre con promedio de {self.promedio}"
+        return f"{self.nombre}\ntiene {self.edad} años\nestudiante de {self.semestre} semestre\npromedio de {self.promedio}"
     
 # Crear instancias de estudiantes
 Juan = Estudiante("Juan", 20, "masculino", "Segundo", 85)
 Josefina = Estudiante("Josefina", 18, "Femenino", "Primer", 65)
 
 # Usar los métodos
-print(Juan.aprobado_o_no())
 print(Juan.describir())
-print(Josefina.aprobado_o_no())
+print(Juan.aprobado_o_no())
 print(Josefina.describir())
-
-
+print(Josefina.aprobado_o_no())
