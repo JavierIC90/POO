@@ -45,5 +45,5 @@ class PersonalLimpieza(Estudiante):
 Pedro = PersonalLimpieza("Pedro", 45, "masculino", "N/A", "N/A")
 
 class Prefecto(Estudiante):
-Luis = Prefecto("Luis", 50, "masculino", "N/A", "N/A")
+Luis = Prefecto("Luis", 50, "masculino", "Tercero", "N/A")
 
