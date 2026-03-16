@@ -35,17 +35,15 @@ Juan = Estudiante("Juan", 20, "masculino", "Segundo", 85)
 Josefina = Estudiante("Josefina", 18, "Femenino", "Primer", 65)
 Pepe = Estudiante("Pepe", 40, "femenino", "Tercer", 100)
 
-# Usar los métodos
-print(Juan.describir())
-print(Juan.aprobado_o_no())
-print(Josefina.describir())
-print(Josefina.aprobado_o_no())
+class Profesor(Estudiante):
+Javier = Profesor("Javier", 35, "masculino", "Cuarto", "N/A")
 
-#Juan esta repobrado
-# Descripcion juan tiene 20 años esta en segundo semestre y su pormedio es de 85
+class Administrativo(Estudiante):
+Maria = Administrativo("Maria", 30, "femenino", "N/A", "N/A")
 
-#Juan
-#tiene 20 años
-#estudiante de Segundo semestre
-#promedio de 85
-#Juan está aprobado.
+class PersonalLimpieza(Estudiante):
+Pedro = PersonalLimpieza("Pedro", 45, "masculino", "N/A", "N/A")
+
+class Prefecto(Estudiante):
+Luis = Prefecto("Luis", 50, "masculino", "N/A", "N/A")
+
