@@ -50,6 +50,7 @@ class laptop(usodeoficina):
     def mostrar_informacion(self):
         super().mostrar_informacion()
         print(f"Procesador: {self.procesador}")
+        print(f"S.O: {self.sistema_operativo}")
 
 class smartphone(usopersonal):
     def __init__(self, nombre, precio, marca, modelo, cantidad, categoria, sistema_operativo):
@@ -59,6 +60,15 @@ class smartphone(usopersonal):
     def mostrar_informacion(self):
         super().mostrar_informacion()
         print(f"Sistema Operativo: {self.sistema_operativo}")
+
+class Juguete(usopersonal):
+    def __init__(self, nombre, precio, marca, modelo, cantidad, categoria, color):
+        super().__init__(nombre, precio, marca, modelo, cantidad, categoria)
+        self.color = color
+
+    def mostrar_informacion(self):
+        super().mostrar_informacion()
+        print(f"Sistema Operativo: {self.color}")
 
 # Ejemplo de uso
 laptop_modelo1 = laptop("Laptop HP", 1200, "HP", "Pavilion", 10, "Oficina", "Intel Core i7", "Windows 10")
@@ -75,3 +85,8 @@ laptop_modelo2 = laptop("Laptop Lenovo", 1500, "Serie3", "Lite", 10, "Oficina", 
 laptop_modelo2.mostrar_informacion()
 laptop_modelo2.actualizar_cantidad(8)
 laptop_modelo2.mostrar_informacion()
+
+Juguete_balon = Juguete("Balon de fut", 200, "Futre", "de oro", 15, "Personal", "Blanco")
+Juguete_balon.mostrar_informacion()       
+Juguete_balon.actualizar_cantidad(12)
+Juguete_balon.mostrar_informacion()
