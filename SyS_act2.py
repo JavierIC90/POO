@@ -133,3 +133,34 @@ plt.grid()
 
 plt.tight_layout()
 plt.show()
+
+# ============================================================
+# 7. Propiedad de linealidad
+# ============================================================
+
+# Crear una nueva señal sumando la senoidal y el pulso
+senal_lineal = senal_seno + senal_pulso
+
+# Transformada de la nueva señal
+fft_lineal = np.fft.fft(senal_lineal)
+
+# Suma de las transformadas individuales
+fft_suma = fft_seno + fft_pulso
+
+# Comparación gráfica
+plt.figure(figsize=(12,5))
+
+plt.subplot(1,2,1)
+plt.plot(frecuencia, np.abs(fft_lineal))
+plt.title("Transformada de la suma")
+plt.xlabel("Frecuencia (Hz)")
+plt.grid()
+
+plt.subplot(1,2,2)
+plt.plot(frecuencia, np.abs(fft_suma))
+plt.title("Suma de las transformadas")
+plt.xlabel("Frecuencia (Hz)")
+plt.grid()
+
+plt.tight_layout()
+plt.show()
